@@ -1,26 +1,26 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import "./App.css";
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+class App extends React.Component {
+  render() {
+    return (
+      <div className="filtros-container">
+        <h3>Filtros</h3>
+        <label htmlFor="valor minimo">
+          Valor minimo:
+          <input type="number" min="0" />
+        </label>
+        <label htmlFor="valor maximo">
+          Valor maximo:
+          <input type="number" min="0" />
+        </label>
+        <label htmlFor="busca por nome">
+          Busca por nome
+          <input type="text" placeholder="Produto" />
+        </label>
+      </div>
+    );
+  }
 }
 
 export default App;
