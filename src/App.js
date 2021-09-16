@@ -1,15 +1,8 @@
 import React from "react";
-import "./App.css";
-import { Products } from "./components/Products/Products";
-import styled from "styled-components";
-import Filtro from "./components/Filtro";
+import "./components/styles/App.css";
+import { Products } from "./components/Products";
 
-const AppContainer = styled.div`
-  display: grid;
-  grid-template-columns: 1fr 3fr 1fr;
-  padding: 16px;
-  gap: 8px;
-`;
+import Filtro from "./components/Filtro";
 
 const products = [
   {
@@ -53,11 +46,11 @@ const products = [
 class App extends React.Component {
   render() {
     return (
-      <div>
+      <div className="app-container">
         <Filtro />
-        <AppContainer>
+        <div className="produtos-container">
           <Products products={products} />
-        </AppContainer>
+        </div>
       </div>
     );
   }
