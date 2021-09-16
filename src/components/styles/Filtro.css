@@ -1,0 +1,14 @@
+.filtros-container {
+  display: flex;
+  box-sizing: border-box;
+  flex-direction: column;
+  align-items: center;
+  border: 1px solid black;
+  width: 200px;
+  height: 100vh;
+  padding: 8px;
+}
+
+.filtros-container > label {
+  margin-top: 4px;
+}
