@@ -1,11 +1,12 @@
 .app-container {
   display: flex;
-  justify-content: space-evenly;
+  justify-content: center;
   align-items: center;
   flex-direction: row;
   width: 100vw;
   height: 100vh;
   box-sizing: border-box;
+  background-image: url(https://cdn.pixabay.com/photo/2020/07/22/01/41/universe-5427747_960_720.jpg);
 }
 
 .filtros-container,
@@ -18,6 +19,8 @@
   width: 200px;
   height: 100vh;
   padding: 8px;
+  background-color: #0b1042;
+  color: beige;
 }
 
 .filtros-container > label {
@@ -25,10 +28,13 @@
 }
 
 .produtos-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  display: flex;
+  grid-template-columns: repeat(5, 5fr);
   gap: 16px;
   padding: 16px;
+  background-image: url(https://cdn.pixabay.com/photo/2020/07/22/01/41/universe-5427747_960_720.jpg);
+  left: 20px;
+  color: beige;
 }
 .produtos-container {
   display: grid;
@@ -36,6 +42,10 @@
   grid-template-rows: 1fr;
   padding: 16px;
   gap: 8px;
+  background-color: #0b1042;
+  width: 70%;
+ color:beige;
+
 }
 
 .produtos-container-card {
