@@ -16,11 +16,12 @@
   flex-direction: column;
   align-items: center;
   border: 1px solid black;
-  width: 200px;
-  height: 100vh;
+  width: 250px;
+  height: 85vh;
   padding: 8px;
   background-color: #0b1042;
   color: beige;
+  background-image: url(https://cdn.pixabay.com/photo/2020/07/22/01/41/universe-5427747_960_720.jpg);
 }
 
 .filtros-container > label {
@@ -31,28 +32,35 @@
   display: flex;
   grid-template-columns: repeat(5, 5fr);
   gap: 16px;
-  padding: 16px;
+  padding: 16px #0b1042;
   background-image: url(https://cdn.pixabay.com/photo/2020/07/22/01/41/universe-5427747_960_720.jpg);
   left: 20px;
   color: beige;
 }
 .produtos-container {
-  display: grid;
+  display: -moz-grid-group;
   grid-template-columns: 1fr 3fr 1fr;
   grid-template-rows: 1fr;
   padding: 16px;
   gap: 8px;
-  background-color: #0b1042;
+  background-color: #040720;
   width: 70%;
- color:beige;
+  color:beige;
 
+}
+h2{
+  color: aqua;
+  text-justify: right;
+  
 }
 
 .produtos-container-card {
   display: flex;
   flex-direction: column;
-  align-items: flex-end;
-  margin-top: 32px;
+  align-items: center;
+  margin-top: 220px;
+  
+  
 }
 
 /* .carrinhoContainer {
