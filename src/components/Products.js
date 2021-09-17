@@ -34,7 +34,7 @@ export class Products extends React.Component {
 
   render() {
     const filteredAndOrderedList = this.getFilteredAndOrderedList();
-    console.log("product js", this.props.buscaMax);
+
     return (
       <div className="produtos-container-card">
         <h2>SPACE AÉREO</h2>
@@ -54,7 +54,7 @@ export class Products extends React.Component {
               <ProductCard
                 product={product}
                 key={product.id}
-                onAddProductToCart={this.props.onAddProductToCart}
+                adicionarCarrinho={this.props.adicionarCarrinho}
               />
             );
           })}
