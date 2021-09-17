@@ -5,7 +5,7 @@ const CardContainer = styled.div`
   border: 1px solid black;
   display: grid;
   flex-direction: column;
-  `;
+`;
 
 const CardInfo = styled.div`
   display: flex;
@@ -32,7 +32,7 @@ export class ProductCard extends React.Component {
           <p>{product.name}</p>
           <p>R${product.price}</p>
           <AddToCartButton
-            onClick={() => this.props.onAddProductToCart(product.id)}
+            onClick={() => this.props.adicionarCarrinho(product.id)}
           >
             Adicionar ao carrinho
           </AddToCartButton>

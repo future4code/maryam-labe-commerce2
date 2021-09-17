@@ -1,66 +1,65 @@
 .app-container {
   display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: row;
-  width: 100vw;
-  height: 100vh;
+  justify-content: space-between;
+  width: 100%;
+  height: 100%;
   box-sizing: border-box;
-  background-image: url(https://cdn.pixabay.com/photo/2020/07/22/01/41/universe-5427747_960_720.jpg);
+  /* background-image: url(https://cdn.pixabay.com/photo/2020/07/22/01/41/universe-5427747_960_720.jpg); */
 }
 
-.filtros-container,
-.carrinhoContainer {
+.filtros-container {
   display: flex;
   box-sizing: border-box;
   flex-direction: column;
   align-items: center;
   border: 1px solid black;
   width: 250px;
-  height: 85vh;
+  height: 100%;
   padding: 8px;
-  background-color: #0b1042;
+  margin: 4px;
+  background-color: #11174e;
   color: beige;
-  background-image: url(https://cdn.pixabay.com/photo/2020/07/22/01/41/universe-5427747_960_720.jpg);
+  /* background-image: url(https://cdn.pixabay.com/photo/2020/07/22/01/41/universe-5427747_960_720.jpg); */
 }
+.carrinhoContainer {
+  display: flex;
+  box-sizing: border-box;
+  flex-direction: column;
+  align-items: center;
+  width: 250px;
+  height: 100%;
+  padding: 8px;
+  margin: 4px;
 
+  color: rgb(8, 8, 8);
+}
 .filtros-container > label {
   margin-top: 4px;
 }
 
 .produtos-grid {
-  display: flex;
-  grid-template-columns: repeat(5, 5fr);
-  gap: 16px;
-  padding: 16px #0b1042;
-  background-image: url(https://cdn.pixabay.com/photo/2020/07/22/01/41/universe-5427747_960_720.jpg);
-  left: 20px;
-  color: beige;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  grid-gap: 8px;
+  justify-content: center;
 }
 .produtos-container {
-  display: -moz-grid-group;
-  grid-template-columns: 1fr 3fr 1fr;
-  grid-template-rows: 1fr;
+  display: grid;
+  grid-template-columns: 1fr 1fr, 1fr;
   padding: 16px;
   gap: 8px;
-  background-color: #040720;
+  background-color: #645d4e;
   width: 70%;
-  color:beige;
-
+  color: beige;
 }
-h2{
+h2 {
   color: aqua;
   text-justify: right;
-  
 }
 
 .produtos-container-card {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  margin-top: 220px;
-  
-  
 }
 
 /* .carrinhoContainer {
