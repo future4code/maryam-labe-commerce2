@@ -9,11 +9,21 @@ class Filtro extends React.Component {
           <h3>Filtros</h3>
           <label htmlFor="valor minimo">
             Valor minimo:
-            <input type="number" min="0" />
+            <input
+              value={this.props.buscaMin}
+              onChange={this.props.valorMin}
+              type="number"
+              min="0"
+            />
           </label>
           <label htmlFor="valor maximo">
             Valor maximo:
-            <input type="number" min="0" />
+            <input
+              value={this.props.buscaMax}
+              onChange={this.props.valorMax}
+              type="number"
+              min="0"
+            />
           </label>
           <label htmlFor="busca por nome">
             Busca por nome
