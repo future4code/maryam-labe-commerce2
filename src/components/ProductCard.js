@@ -22,45 +22,22 @@ const AddToCartButton = styled.button`
   margin-top: 4px;
 `;
 
-const ProductCard = (props) => {
-  return (
-    <>
+export class ProductCard extends React.Component {
+  render() {
+    const product = this.props.product;
+    return (
       <CardContainer>
-        <img src={props.foto} alt="" />
+        <img src={product.photo} />
         <CardInfo>
-          <p>{props.nome}</p>
-          <p>{props.preco}</p>
-          <AddToCartButton>Adicionar ao carrinho</AddToCartButton>
+          <p>{product.name}</p>
+          <p>R${product.price},00</p>
+          <AddToCartButton
+            onClick={() => this.props.onAddProductToCart(product.id)}
+          >
+            Adicionar ao carrinho
+          </AddToCartButton>
         </CardInfo>
       </CardContainer>
-    </>
-  );
-};
-
-export default ProductCard;
-
-// class ProductCard extends React.Component {
-//   render() {
-
-//     return (
-//       <CardContainer>
-//         <img src={product.photo} alt={product.name} />
-//         <CardInfo>
-//           <p>{product.name}</p>
-//           <p>{product.price}</p>
-//           <AddToCartButton>Adicionar ao carrinho</AddToCartButton>
-//         </CardInfo>
-//         {/* <img src={product.photo} />
-//         <CardInfo>
-//           <p>{this.props.product.name}</p>
-//           <p>R${product.price},00</p>
-//           <AddToCartButton
-//             onClick={() => this.props.onAddProductToCart(product.id)}
-//           >
-//             Adicionar ao carrinho
-//           </AddToCartButton>
-//         </CardInfo> */}
-//       </CardContainer>
-//     );
-//   }
-// }
+    );
+  }
+}
