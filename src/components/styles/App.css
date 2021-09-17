@@ -12,13 +12,13 @@
   box-sizing: border-box;
   flex-direction: column;
   align-items: center;
-  border: 1px solid black;
+
   width: 250px;
   height: 100%;
   padding: 8px;
   margin: 4px;
-  background-color: #11174e;
-  color: beige;
+  background-color: #d0d1e2;
+  color: rgb(8, 8, 8);
   /* background-image: url(https://cdn.pixabay.com/photo/2020/07/22/01/41/universe-5427747_960_720.jpg); */
 }
 .carrinhoContainer {
@@ -48,12 +48,12 @@
   grid-template-columns: 1fr 1fr, 1fr;
   padding: 16px;
   gap: 8px;
-  background-color: #645d4e;
+  background-color: #e7e7e7;
   width: 70%;
-  color: beige;
+  color: rgb(20, 20, 20);
 }
 h2 {
-  color: aqua;
+  color: rgb(89, 138, 138);
   text-justify: right;
 }
 
