@@ -3,9 +3,9 @@ import styled from "styled-components";
 
 const CardContainer = styled.div`
   border: 1px solid black;
-  display: flex;
+  display: grid;
   flex-direction: column;
-`;
+  `;
 
 const CardInfo = styled.div`
   display: flex;

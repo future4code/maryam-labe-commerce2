@@ -5,6 +5,7 @@ import { Products } from "./components/Products";
 import Filtro from "./components/Filtro";
 import Carrinho from "./components/Carrinho";
 
+
 const products = [
   {
     id: 1,
@@ -50,6 +51,7 @@ class App extends React.Component {
     maxFilter: "",
     minFilter: "",
     filtroNome: "",
+    listaCarrinho: []
   };
   filtrarValorMin = (e) => {
     this.setState({ minFilter: e.target.value });
@@ -61,6 +63,31 @@ class App extends React.Component {
   filtrarPeloNome = (e) => {
     this.setState({ filtroNome: e.target.value });
   };
+
+
+
+  function onAddProductToCart (product ) {
+    const listProducts = [...this.state.listaCarrinho] 
+    const produtoExist = listProducts.find((item)=>{
+    return item.id === product.id 
+    })
+    if (!produtotExist) {
+      const novoProduto = {
+        ...product,
+        quantidade: 1,
+      };
+      this.setState({
+        listaCarrinho: [...listProducts, novoProduto],
+      });
+    } else {
+      const indexProdutoLista = listProducts.findIndex((item) => {
+        return item.id === produt.id;
+      });
+      listProducts[indexProdutoLista].quantidade += 1;
+      this.setState({ listaCarrinho: listProducts });
+    }
+  }
+ 
 
   render() {
     return (
