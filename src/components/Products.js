@@ -11,14 +11,16 @@ export class Products extends React.Component {
   getFilteredAndOrderedList = () => {
     return this.props.products
       .filter((product) =>
-        this.props.maxFilter ? product.price < this.props.maxFilter : true
+        this.props.buscaMax ? product.price < this.props.buscaMax : true
       )
       .filter((product) =>
-        this.props.minFilter ? product.price > this.props.minFilter : true
+        this.props.buscaMin ? product.price > this.props.buscaMin : true
       )
       .filter((product) =>
-        this.props.nameFilter
-          ? product.name.includes(this.props.nameFilter)
+        this.props.buscaNome
+          ? product.name
+              .toLowerCase()
+              .includes(this.props.buscaNome.toLowerCase())
           : true
       )
       .sort((a, b) =>
@@ -32,6 +34,7 @@ export class Products extends React.Component {
 
   render() {
     const filteredAndOrderedList = this.getFilteredAndOrderedList();
+    console.log("product js", this.props.buscaMax);
     return (
       <div className="produtos-container-card">
         <h2>SPACE AÉREO</h2>
@@ -50,6 +53,7 @@ export class Products extends React.Component {
             return (
               <ProductCard
                 product={product}
+                key={product.id}
                 onAddProductToCart={this.props.onAddProductToCart}
               />
             );
