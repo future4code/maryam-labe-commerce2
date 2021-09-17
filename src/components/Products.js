@@ -34,6 +34,7 @@ export class Products extends React.Component {
     const filteredAndOrderedList = this.getFilteredAndOrderedList();
     return (
       <div className="produtos-container-card">
+        <h2>SPACE AÉREO</h2>
         <div className="produtos-header">
           <p>Quantidade de produtos: {filteredAndOrderedList.length}</p>
           <label>
