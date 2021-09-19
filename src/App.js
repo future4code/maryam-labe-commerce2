@@ -3,12 +3,16 @@ import { Filters } from './components/Filters/Filters';
 import { Products } from './components/Products/Products';
 import { ShoppingCart } from './components/ShoppingCart/ShoppingCart';
 import styled from 'styled-components';
+import img from './back.jpg'
 
 const AppContainer = styled.div`
   display: grid;
   grid-template-columns: 1fr 3fr 1fr;
   padding: 16px;
   gap: 8px;
+  background: url(${img});
+  background-size: 100vh;
+  color: white;
 `;
 
 const products = [
@@ -52,8 +56,8 @@ const products = [
 
 class App extends React.Component {
   state = {
-    minFilter: 100,
-    maxFilter: 1000,
+    minFilter: 1,
+    maxFilter: 10000000,
     nameFilter: 'Produto',
     productsInCart: [
       {
@@ -126,27 +130,27 @@ class App extends React.Component {
 
   render() {
     return (
-      <AppContainer>
-        <Filters
-          minFilter={this.state.minFilter}
-          maxFilter={this.state.maxFilter}
-          nameFilter={this.state.nameFilter}
-          onChangeMinFilter={this.onChangeMinFilter}            
-          onChangeMaxFilter={this.onChangeMaxFilter}            
-          onChangeNameFilter={this.onChangeNameFilter}                  
-        />
-        <Products 
-          products={products}
-          minFilter={this.state.minFilter}
-          maxFilter={this.state.maxFilter}
-          nameFilter={this.state.nameFilter}
-          onAddProductToCart={this.onAddProductToCart}
-        />
-        <ShoppingCart
-          productsInCart={this.state.productsInCart}
-          onRemoveProductFromCart={this.onRemoveProductFromCart}
-        />
-      </AppContainer>
+          <AppContainer>
+            <Filters
+              minFilter={this.state.minFilter}
+              maxFilter={this.state.maxFilter}
+              nameFilter={this.state.nameFilter}
+              onChangeMinFilter={this.onChangeMinFilter}            
+              onChangeMaxFilter={this.onChangeMaxFilter}            
+              onChangeNameFilter={this.onChangeNameFilter}                  
+            />
+            <Products 
+              products={products}
+              minFilter={this.state.minFilter}
+              maxFilter={this.state.maxFilter}
+              nameFilter={this.state.nameFilter}
+              onAddProductToCart={this.onAddProductToCart}
+            />
+            <ShoppingCart
+              productsInCart={this.state.productsInCart}
+              onRemoveProductFromCart={this.onRemoveProductFromCart}
+            />
+          </AppContainer>
     );
   }
 }

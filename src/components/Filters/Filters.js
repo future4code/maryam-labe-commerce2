@@ -2,7 +2,7 @@ import React from 'react'
 import styled from 'styled-components';
 
 const FiltersContainer = styled.div`
-  border: 1px solid black;
+  border: 1px solid white;
   padding: 8px;
 `;
 
